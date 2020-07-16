@@ -1,0 +1,50 @@
+<!--pages/examResult/index.wxml-->
+<view class='page'>
+
+	<view class="cu-card case ">
+		<view class="cu-item shadow bg-gradual-green">
+
+			<view class="cu-bar">
+				<view class="action padding-top">
+					<text class="cuIcon-titles text-green"></text>
+					<text class="cuIcon-upstagefill"></text>
+					<text class="text-xl text-bold ">获得称号: {{title}}</text>
+
+				</view>
+
+			</view>
+			<view class="cu-bar">
+				<view class="action">
+					<text class="cuIcon-titles text-green"></text>
+					<text class="cuIcon-rank"></text>
+					<text class="text-sm text-bold">答对了{{rightNum}}道题</text>
+				</view>
+
+			</view>
+			<view class="margin-top-sm ">
+				<!-- <text>By:kp</text> -->
+			</view>
+		</view>
+
+	</view>
+
+	<view class="cu-card margin-top">
+		
+		<poster class="cu-item bg-gradual-orange shadow-blur" hide-loading="{{true}}" preload="{{false}}" config="{{posterConfig}}" bind:success="onPosterSuccess" bind:fail="onPosterFail">
+		  <view class="cardTitle">分享结果</view>
+			<!-- <view class="cardTitle">分享战绩</view> -->
+		</poster>
+		<view class="cu-item bg-gradual-red shadow-blur " bindtap="examBack" data-id="{{exam._id}}" data-code="{{exam.code}}">
+			<view class="cardTitle">
+				返回主页
+			</view>
+		</view>
+		<view class="cu-item bg-gradual-orange shadow-blur" bindtap="toQuestionPage" data-id="{{exam._id}}" data-code="{{exam.code}}">
+			<view class="cardTitle">
+				重新开始
+			</view>
+		</view>
+
+
+	</view>
+</view>

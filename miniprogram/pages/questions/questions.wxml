@@ -1,0 +1,107 @@
+<wxs src="./../tools.wxs" module="JSON" />
+
+<view class="exam">
+    <view class="sortnumber">
+        <view class="left cuIcon-selection">得分:{{score}}</view>
+        <view class="right">
+            <text class="text-grey">第{{idx+1}}题 | 共{{length}}题</text>
+        </view>
+    </view>
+       
+        
+    <view class="progress">
+        <progress percent="{{percent}}" color="#1dcc70" active />
+    </view>
+
+    <view class="question">
+        <view class="cu-card radius case margin-top shadow">
+			<view class="cu-item shadow">
+				<view class="image ">
+					<image src="{{question.title}}"
+					 mode="widthFix"></image>
+					<view class="cu-tag radius">{{typename}}</view>
+					<!-- <view class="cu-bar bg-shadeBottom"> <text class="text-cut">可以添加文本</text></view> -->
+				</view>
+			</view>
+		</view>
+
+        <!-- <view class="type">{{question.typename}}</view> -->
+        <view class="answerBox padding text-center">
+            <!-- <view class="cu-bar"> <text class="text-cut">图中的物体是:</text></view> -->
+            
+            <view class="cu-bar  input shadow margin-bottom">
+                <input focus placeholder="输入答案..." bindinput="onBindInput" bindconfirm="onBindConfirm" maxlength="500" value="{{answer}}"></input>
+            <!-- <button class="cu-btn bg-green shadow-blur">确定</button> -->
+            </view>
+            <view class="margin-top margin-bottom flex justify-between align-center ">
+                    <button class="cu-btn {{lives==0?'bg-grey':'bg-green'}}" bindtap="onBindSkip">换一题({{lives}})</button>
+                    <view style="width: 50rpx"></view>
+                    <button class="cu-btn  {{hints==0?'bg-grey':'bg-yellow'}}" bindtap="onBindHind">
+                        <text class="cuIcon-creative text-white">提示({{hints}})</text>
+                    </button>
+            </view>
+             <view class="margin-top flex justify-between" style="margin-top: 100rpx"> 
+                
+                <view class="cu-btn radius bg-olive" bindtap="goResult">
+                    <text class="cuIcon-exit"></text>
+                </view>
+                
+                <view class="cu-btn radius bg-olive" bindtap="onBindHelp">
+                    <text class="cuIcon-question"></text>
+                </view>
+                <!-- <view style="width: 30rpx"></view> -->
+                <view class="cu-btn radius bg-olive" bindtap="">
+                    <text class="cuIcon-musicforbidfill"></text>
+                </view>
+                <view style="width: 400rpx"></view>
+              
+             </view>
+
+            
+        </view>
+        
+
+    </view>
+    <view class="cu-modal {{showResult?'show':''}}">
+        <view class="cu-dialog padding-top ">
+            <view class="solid-bottom text-xl padding-top"><text class="text-black text-bold">{{result}}</text></view>
+            <!-- <view class="padding" wx:if="{{!isRight}}">正确答案是:{{realAnswers[0]}}</view> -->
+            <view class="margin-top margin-bottom flex justify-between align-center ">
+                <button class="cu-btn radius {{!isRight?'bg-green':'bg-grey'}}" bindtap="{{!isRight?'hideResultModel':''}}" >再试一次</button>
+                <view style="width: 50rpx"></view>
+                <button open-type="getUserInfo" class="cu-btn radius {{isRight?'bg-green':'bg-grey'}}" bindtap="doNext">{{idx+1!=length?'下一题':'完成'}}</button>
+            </view>
+        </view>
+    </view>
+    
+    <view class="cu-modal {{showHint?'show':''}}">
+        <view class="cu-dialog ">
+            <view class="cu-bar">
+                <view class="action sub-title">
+                    <text class="text-xl text-bold text-green">提示</text>
+                    <text class="bg-green" style="width:2rem"></text>
+                    <!-- last-child选择器-->
+                </view>
+			</view>
+            <view class="text-xl margin"><text class="text-black text-bold">{{hint}}</text></view>
+            <view class="cu-bar bg-white">
+                <view class="action button margin-0 flex-sub  solid-left" bindtap="hideHintModel">我知道了</view>
+            </view>
+        </view>
+    </view>
+    <view class="cu-modal {{showHelp?'show':''}}">
+        <view class="cu-dialog ">
+            <view class="cu-bar">
+                <view class="action sub-title">
+                    <text class="text-xl text-bold text-green">游戏帮助</text>
+                    <text class="bg-green" style="width:2rem"></text>
+                    <!-- last-child选择器-->
+                </view>
+			</view>
+            <view class="text-xl margin"><text class="text-black text-bold">暂无</text></view>
+            <view class="cu-bar bg-white">
+                <view class="action button margin-0 flex-sub  solid-left" bindtap="hideHelpModel">关闭</view>
+            </view>
+        </view>
+    </view>
+</view> 

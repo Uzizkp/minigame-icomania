@@ -1,0 +1,15 @@
+{
+  "pages": [
+
+    "pages/index/index",
+    "pages/examresult/examresult",
+    "pages/about/index",
+    "pages/questions/questions",
+    "pages/setting/setting"
+  ],
+  "window": {
+    "navigationBarTitleText": ""
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

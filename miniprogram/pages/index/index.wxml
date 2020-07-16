@@ -1,0 +1,32 @@
+<view class="UCenter-bg" style="background-image:url(https://i.loli.net/2020/06/29/6xekaU813rENcvM.jpg)">
+	<!-- <image src="/images/logo.png" class="png" mode="widthFix"></image> -->
+	<image class="logo" src="../../images/logo.png"></image>
+	<view class="margin-top-sm">
+		<!-- <text>By:kp</text> -->
+	</view>
+	<image src="https://raw.githubusercontent.com/weilanwl/ColorUI/master/demo/images/wave.gif" mode="scaleToFill" class="gif-wave"></image>
+</view>
+
+
+
+<view class="page-home">
+
+	<view class="cu-card">
+		<view class="cu-item bg-gradual-green shadow-blur" bindtap="toSubjectsPage" data-id="{{exam._id}}" data-code="{{exam.code}}" >
+			<view class="cardTitle">
+				开始游戏
+			</view>
+		</view>
+        <view class="cu-item bg-gradual-blue shadow-blur"  bindtap="toAboutPage">
+			<view class="cardTitle">
+                游戏帮助
+			</view>
+		</view>
+        <view class="cu-item bg-gradual-purple shadow-blur"  bindtap="toSettingPage" data-id="{{exam._id}}" data-code="{{exam.code}}" >
+			<view class="cardTitle">
+                更多设置
+			</view>
+		</view>
+	</view>
+
+</view>

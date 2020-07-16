@@ -1,0 +1,30 @@
+<view class="page-about">
+
+	<view class="cu-card dynamic {{isCard?'no-card':''}}">
+		<view class="cu-item shadow">
+			<view class="cu-list menu-avatar">
+				<view class="cu-bar">
+					<view class="action sub-title">
+						<text class="text-xl text-bold text-green">游戏帮助</text>
+						<text class="bg-green" style="width:2rem"></text>
+						<!-- last-child选择器-->
+					</view>
+				</view>
+			</view>
+			<view class="text-content">
+				折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！
+                折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！
+                折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！
+                折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！
+
+                折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！
+                折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！
+                折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！
+                折磨生出苦难，苦难又会加剧折磨，凡间这无穷的循环，将有我来终结！
+                
+			</view>
+
+
+		</view>
+	</view>
+</view>

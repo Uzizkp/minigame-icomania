@@ -1,0 +1,46 @@
+
+
+
+
+
+<view class="cu-list menu card-menu  margin-top-xl margin-bottom-xl shadow-lg bg-grey radius">
+    <view class="cu-item arrow">
+      <button class="content" open-type="contact">
+        <image class="cuIcon-edit text-grey"></image>
+        <text class="text-grey">意见反馈</text>
+      </button>
+    </view>
+    <view class="cu-item arrow">
+      <button class="content" bindtap="onAboutTap">
+        <image class="cuIcon-friendfavor text-grey" ></image>
+        <text class="text-grey">关于作者</text>
+      </button>
+    </view>
+
+    <!-- <view class="cu-item arrow">
+      <button class="content" bindtap="showModal" data-target="Modal">
+        <image class="cuIcon-appreciate text-grey"></image>
+        <text class="text-grey">赞赏捐赠</text>
+      </button>
+    </view> -->
+    <view class="cu-item arrow">
+      <button class="content" open-type="share">
+        <image class="cuIcon-share text-grey"></image>
+        <text class="text-grey">分享应用</text>
+      </button>
+    </view>
+  </view>
+
+<view class="cu-modal {{modalName=='Modal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content cuIcon-appreciate">赞赏捐赠</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      <image src="https://bonn-dorm-1253324855.cos.eu-frankfurt.myqcloud.com/qrcode/appericate-wechat.jpg" bindtap="previewImage" class="png" mode="widthFix"></image>
+    </view>
+  </view>
+</view>

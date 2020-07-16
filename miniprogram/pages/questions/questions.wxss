@@ -1,0 +1,69 @@
+page{
+    padding-top: 200rpx;
+    /* background-color: #b8e986; */
+}
+.exam .sortnumber{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.exam .sortnumber .left{
+    /* color: #b9bfc6; */
+}
+.exam .sortnumber .right{
+    /* background-color: #d8f3e7; */
+    border-radius: 10px;
+    /* color: #b9bfc6; */
+}
+.exam .sortnumber .right text{
+    width: 80px;
+    height: 20px;
+    border-radius: 10px;
+    color: #000;
+    /* background-color: #1bcfad; */
+    display: float;
+    right: 0;
+}
+.exam .progress{
+    padding: 10px;
+}
+.exam .question{
+    /* background-color: #b8e986; */
+}
+.exam .question .title{
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 5px;
+    
+}
+.exam .question .type{
+    background-color: #fff;
+    margin: 5px 0;
+    height: 45px;
+    line-height: 45px;
+    vertical-align: middle;
+    padding-left: 10px;
+}
+
+
+.wrong{
+    background-color: #f9e5e0;
+}
+
+
+
+
+.cu-card{
+    height: 500rpx
+
+}
+
+.cu-dialog{
+    /* height: 700rpx; */
+    padding: 20rpx;
+    /* border:1px solid #9BDF70; */
+}
+
